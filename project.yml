@@ -1,0 +1,32 @@
+name: BootMaker
+options:
+  bundleIdPrefix: com.bootmaker
+  deploymentTarget:
+    iOS: "16.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    IPHONEOS_DEPLOYMENT_TARGET: "16.0"
+    TARGETED_DEVICE_FAMILY: "1"
+    SUPPORTS_MACCATALYST: NO
+    ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    CODE_SIGNING_ALLOWED: NO
+    GENERATE_INFOPLIST_FILE: NO
+    MARKETING_VERSION: "0.2.0"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  BootMaker:
+    type: application
+    platform: iOS
+    sources:
+      - path: BootMaker
+        excludes:
+          - Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.bootmaker.ios
+        PRODUCT_NAME: BootMaker
+        INFOPLIST_FILE: BootMaker/Info.plist
+    scheme:
+      testTargets: []
